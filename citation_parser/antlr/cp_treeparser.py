@@ -123,7 +123,7 @@ class cp_treeparser(TreeParser):
 
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -185,7 +185,7 @@ class cp_treeparser(TreeParser):
 
                 #action end
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -271,15 +271,15 @@ class cp_treeparser(TreeParser):
 
                 #action start
                        
-                if(not self.curr_ref.has_key('work') and self.prev_ref.has_key('work')):
+                if('work' not in self.curr_ref and 'work' in self.prev_ref):
                 	self.curr_ref["work"]=self.prev_ref["work"]
-                elif(not self.curr_ref.has_key('work')):
+                elif('work' not in self.curr_ref):
                 	self.curr_ref["work"]=None
                 self.refs.append(dict(self.curr_ref))
 
                 #action end
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -348,7 +348,7 @@ class cp_treeparser(TreeParser):
 
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -379,7 +379,7 @@ class cp_treeparser(TreeParser):
 
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -478,7 +478,7 @@ class cp_treeparser(TreeParser):
 
                 #action end
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -539,7 +539,7 @@ class cp_treeparser(TreeParser):
 
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -576,7 +576,7 @@ class cp_treeparser(TreeParser):
 
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:
@@ -647,7 +647,7 @@ class cp_treeparser(TreeParser):
 
                 #action end
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
         finally:

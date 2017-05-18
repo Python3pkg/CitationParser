@@ -166,7 +166,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -300,7 +300,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -378,7 +378,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -536,7 +536,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -616,7 +616,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -748,7 +748,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -839,7 +839,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -906,7 +906,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -1034,7 +1034,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -1127,7 +1127,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -1247,7 +1247,7 @@ class cp_parser(Parser):
                     self._adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop)
 
 
-            except RecognitionException, re:
+            except RecognitionException as re:
                 self.reportError(re)
                 self.recover(self.input, re)
                 retval.tree = self._adaptor.errorNode(self.input, retval.start, self.input.LT(-1), re)
@@ -1320,39 +1320,39 @@ class cp_parser(Parser):
     # lookup tables for DFA #5
 
     DFA5_eot = DFA.unpack(
-        u"\6\uffff"
+        "\6\uffff"
         )
 
     DFA5_eof = DFA.unpack(
-        u"\1\uffff\1\4\3\uffff\1\4"
+        "\1\uffff\1\4\3\uffff\1\4"
         )
 
     DFA5_min = DFA.unpack(
-        u"\3\4\2\uffff\1\4"
+        "\3\4\2\uffff\1\4"
         )
 
     DFA5_max = DFA.unpack(
-        u"\1\4\1\21\1\4\2\uffff\1\21"
+        "\1\4\1\21\1\4\2\uffff\1\21"
         )
 
     DFA5_accept = DFA.unpack(
-        u"\3\uffff\1\2\1\1\1\uffff"
+        "\3\uffff\1\2\1\1\1\uffff"
         )
 
     DFA5_special = DFA.unpack(
-        u"\6\uffff"
+        "\6\uffff"
         )
 
             
     DFA5_transition = [
-        DFA.unpack(u"\1\1"),
-        DFA.unpack(u"\1\4\1\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\4\5\uffff"
-        u"\1\4"),
-        DFA.unpack(u"\1\5"),
-        DFA.unpack(u""),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\4\1\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\4\5\uffff"
-        u"\1\4")
+        DFA.unpack("\1\1"),
+        DFA.unpack("\1\4\1\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\4\5\uffff"
+        "\1\4"),
+        DFA.unpack("\1\5"),
+        DFA.unpack(""),
+        DFA.unpack(""),
+        DFA.unpack("\1\4\1\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\4\5\uffff"
+        "\1\4")
     ]
 
     # class definition for DFA #5

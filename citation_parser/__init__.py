@@ -8,9 +8,9 @@ from operator import itemgetter
 import antlr3
 import sys
 import re
-from antlr.cp_lexer import cp_lexer
-from antlr.cp_parser import cp_parser
-from antlr.cp_treeparser import cp_treeparser
+from .antlr.cp_lexer import cp_lexer
+from .antlr.cp_parser import cp_parser
+from .antlr.cp_treeparser import cp_treeparser
 try:
 	import simplejson as json
 except ImportError:
@@ -41,7 +41,7 @@ class CitationParser:
 			try:
 				r=parser.doc()
 				root = r.tree
-				print root.toStringTree()
+				print(root.toStringTree())
 				logger.debug(root.toStringTree())
 				try:
 					nodes = antlr3.tree.CommonTreeNodeStream(root)
